@@ -1,0 +1,54 @@
+/* v07: preserve the established palette/grid; refine content hierarchy and reading. */
+.nav-sentinel{position:absolute;inset:0 auto auto 0;width:1px;height:32px;pointer-events:none}
+.site-controls{height:58px;isolation:isolate}
+.site-controls::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bg);opacity:0;transition:opacity .3s var(--ease)}
+.is-scrolled .site-controls::before{opacity:.97}
+.ghost-names{transition:opacity .35s var(--ease)}
+.is-scrolled .ghost-names{opacity:0}
+body[data-page=project] .ghost-names,body[data-page=about] .ghost-names{display:none}
+.identity h1 .display,.intro-a .display{-webkit-text-stroke:1.4px var(--bg);paint-order:stroke fill}
+.identity-meta,.role-rail>p{background:color-mix(in srgb,var(--bg) 88%,transparent);width:fit-content}
+.entry-film{overflow:hidden}
+body[data-page=works] .work-mode{background:var(--bg);padding-inline:12px}
+.entry-art{position:absolute;height:87%;max-width:42%;width:auto;object-fit:contain;top:7%;left:7%;opacity:.5;transform:rotate(-12deg)}
+.entry-art:last-child{left:auto;right:5%;top:10%;height:84%;transform:rotate(12deg)}
+body[data-page=works] .case-card[data-emphasis=feature]{grid-column:1/-1;height:clamp(470px,73svh,780px)}
+body[data-page=works] .case-card[data-emphasis=feature] .case-meta h2{font-size:clamp(19px,2.4vw,34px)}
+body[data-page=works] .case-card[data-emphasis=feature][data-format=landscape] .case-mat{height:80%;width:auto;aspect-ratio:16/9;max-width:90%;max-height:none}
+body[data-page=works] .case-card .case-mat{transition:transform .45s var(--ease);will-change:auto}
+body[data-page=works] .collection-posters{height:86%;width:100%;max-width:none;min-width:0;aspect-ratio:auto;position:relative;padding:0}
+.collection-posters>img{position:absolute;top:50%;left:50%;width:auto;height:82%;max-width:34%;max-height:100%;object-fit:contain;transform:translate(-50%,-50%)}
+.collection-posters>img:nth-child(1){left:34%;height:76%;transform:translate(-50%,-50%) rotate(-12deg)}
+.collection-posters>img:nth-child(2){left:66%;height:76%;max-width:426px;transform:translate(-50%,-50%) rotate(11deg)}
+.collection-posters>img:nth-child(3){height:94%;max-width:42%;transform:translate(-50%,-50%) rotate(-3deg)}
+.bio-intro{padding-bottom:100px}
+.bio-intro-copy{grid-column:4/8}
+.bio-intro-links{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:25px;font-size:13px}
+.bio-toolset{padding-top:30px;padding-bottom:95px;row-gap:35px}
+.bio-toolset h2{font-size:clamp(30px,3.8vw,56px)}
+.bio-tools p{font-size:clamp(18px,1.8vw,28px)}
+.bio-tools>div{padding-block:22px}
+.practice-button{transition:opacity .25s}
+@media(max-width:991px){.primary-tabs{gap:20px}.collection-posters>img:nth-child(2){max-width:34%}}
+@media(max-width:767px){
+ .site-controls{height:58px;background:none;backdrop-filter:none}
+ .site-controls::before{opacity:.97}
+ .identity h1 .display,.intro-a .display{-webkit-text-stroke:0}
+ body[data-page=works] .filter-bar{top:58px}
+ body[data-page=works] .case-card[data-emphasis=feature]{height:480px}
+ body[data-page=works] .case-card[data-emphasis=feature][data-format=landscape]{height:340px}
+ body[data-page=works] .case-card[data-emphasis=feature] .case-meta h2{font-size:18px}
+ .collection-posters>img:nth-child(1){left:25%;max-width:40%;height:69%}
+ .collection-posters>img:nth-child(2){left:75%;max-width:40%;height:67%}
+ .collection-posters>img:nth-child(3){max-width:62%;height:82%}
+ .bio-intro{padding-bottom:65px}
+ .bio-intro-copy{grid-column:2/7}
+ .bio-intro-links{gap:12px 24px;font-size:12px}
+ .bio-toolset{padding-block:20px 65px}
+ .bio-toolset h2{font-size:8vw}
+ .bio-tools p{font-size:4.8vw}
+ .entry-art{max-width:45%;height:78%;top:12%;left:3%}
+ .entry-art:last-child{right:1%;height:76%;top:15%}
+}
+@media(max-width:359px){body[data-page=works] .case-card[data-emphasis=feature]{height:410px}body[data-page=works] .case-card[data-emphasis=feature][data-format=landscape]{height:300px}}
+@media(prefers-reduced-motion:reduce){.site-controls::before,.ghost-names{transition:none}.case-mat{will-change:auto!important}}

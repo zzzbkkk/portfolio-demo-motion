@@ -1,0 +1,19 @@
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#171717;font:16px/1.8 Arial,"Noto Sans SC","Microsoft YaHei",sans-serif}
+body[data-demo-style="product"]{background:#101010;color:#e7e7e7;--accent:#fa4c14;--muted:#a4a4a4;--line:#353535}
+body[data-demo-style="editorial"]{--accent:#171717;--muted:#656565;--line:#dedede}
+body[data-demo-style="motion"]{background:#ff633d;color:#080808;--accent:#080808;--muted:#502117;--line:#c54c2f}
+a{color:inherit;text-underline-offset:5px}a:focus-visible{outline:2px solid currentColor;outline-offset:6px}
+.document-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;border-bottom:1px solid var(--line);padding:22px clamp(20px,5vw,72px);font-size:14px}
+.document-nav nav{display:flex;gap:24px}.document-nav a{text-decoration:none}.document-brand{font-weight:700}.document-brand small{font-size:10px;letter-spacing:.08em;margin-left:8px}
+.demo-document{width:min(100% - 40px,940px);margin:70px auto 90px}.document-kicker{color:var(--muted);font-size:13px;margin:0 0 20px}
+h1{font-size:clamp(36px,6vw,76px);letter-spacing:-.045em;line-height:1.15;margin:0 0 28px}h2{font-size:24px;line-height:1.4;letter-spacing:-.02em;margin:0 0 16px}
+.document-lead{font-size:20px;max-width:38em;margin-bottom:42px}.document-section{padding:30px 0;border-top:1px solid var(--line)}
+.document-section p{margin:0 0 14px;max-width:68ch}.document-section p:last-child{margin-bottom:0}.document-section ul{padding-left:1.2em;max-width:68ch}
+.document-section li{margin:7px 0}.document-note{color:var(--muted);font-size:14px}.document-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.document-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:9px 18px;border:1px solid currentColor;text-decoration:none;white-space:nowrap}
+.document-actions a:first-child{background:var(--accent);color:#fff;border-color:var(--accent)}
+body[data-demo-style="editorial"] .document-actions a:first-child,body[data-demo-style="motion"] .document-actions a:first-child{background:#111;color:#fff}
+.document-footer{border-top:1px solid var(--line);padding:24px clamp(20px,5vw,72px);font-size:12px;color:var(--muted)}
+@media(max-width:600px){.document-nav{font-size:12px;padding:18px 20px}.document-nav nav{gap:16px}.demo-document{margin:40px auto 58px}.document-lead{font-size:17px}h2{font-size:21px}.document-section{padding:24px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

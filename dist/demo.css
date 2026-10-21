@@ -1,0 +1,7 @@
+
+.demo-imprint{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px;padding:20px clamp(20px,3vw,48px);font:12px/1.7 Arial,"Noto Sans SC",sans-serif;color:inherit;opacity:.75}
+.demo-imprint p{margin:0;max-width:70ch}.demo-imprint a{color:inherit;text-underline-offset:4px;white-space:nowrap}
+.demo-help-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap}
+.demo-wordmark-label{font-size:10px;letter-spacing:.08em;font-weight:400;margin-left:8px;vertical-align:middle}
+body[data-page="home"] .demo-imprint{font-size:11px}
+@media(max-width:600px){.demo-imprint{display:block;font-size:11px;padding:18px 20px}.demo-imprint a{display:inline-block;margin-top:6px}.demo-wordmark-label{font-size:9px;margin-left:5px}}
