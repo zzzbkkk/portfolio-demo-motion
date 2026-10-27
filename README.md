@@ -15,3 +15,7 @@
 在上级目录执行 node preview.mjs 可同时打开三套本机演示。
 
 不要将本项目的文件复制回原站，也不要把原仓库的 .git、CNAME 或自动部署配置复制到本项目。
+
+## 彩色棚拍肖像
+
+首页与关于页现使用 `dist/assets/portrait-demo-studio-v2.webp`。首页为近景裁切，关于页保留既有半身照片框与动效；原头像保留以便回退。生成方式和提示词见 `docs/portrait-studio-v2.md`。
